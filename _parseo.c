@@ -31,8 +31,8 @@ int _parseo(const char *format, op_t ops[], va_list ap)
 					if (format[i + 1] != '\0')
 					{
 						print_char(format[i]);
-						print_char(format[i + 2]);
-						print = print + 2;
+						print_char(format[i + 1]);
+						print = print + 1;
 					}
 					else
 						return (-1);
