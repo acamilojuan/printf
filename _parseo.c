@@ -15,7 +15,7 @@ int _parseo(const char *format, op_t ops[], va_list ap)
 	{
 		if (format[i] == '%')
 		{
-			for (j = 0; ops[j].op; j++)
+			for (j = 0; ops[j].op != '\0'; j++)
 			{
 				if (format[i + 1] == ops[j].op[0])
 				{
@@ -32,7 +32,7 @@ int _parseo(const char *format, op_t ops[], va_list ap)
 					{
 						print_char(format[i]);
 						print_char(format[i + 1]);
-						print = print + 1;
+						print = print + 2;
 					}
 					else
 						return (-1);
