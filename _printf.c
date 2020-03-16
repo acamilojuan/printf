@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 	}
 	else
 	{
-		return(-1);
+		return (-1);
 	}
 	return (print);
 }
