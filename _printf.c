@@ -19,8 +19,11 @@ int _printf(const char *format, ...)
 	{
 		va_start(ap, format);
 		print = _parseo(format, ops, ap);
-		return (print);
+		va_end(ap);
 	}
-	va_end(ap);
-	return (-1);
+	else
+	{
+		return(-1);
+	}
+	return (print);
 }
