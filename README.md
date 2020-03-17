@@ -1,8 +1,8 @@
-#PRINTF PROJECT
+			<h1>PRINTF PROJECT</h1>
 
 ![printf](https://cdn.pixabay.com/photo/2015/04/03/18/56/font-705667_960_720.jpg)
 
-##PURPOSE
+<h2>PURPOSE</h2>
 In order to apply different knowledges we have learned, in this project we've been encouraged to create our own function "printf"
 
 ##REQUIREMENTS
