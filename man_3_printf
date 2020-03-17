@@ -12,7 +12,7 @@
 .TP
 _printf is a function that shows the content that is sent on the screen according to a format Return value Once. The return is successful, this function returns the number of characters printed (excluding the null byte to end the string).
 .TP
-If an output error is encountered, a negative value is returned.
+If an output error is found, a negative value is returned.
 .SH OPTIONS
 .B FORMAT controls the output as in C printf. Interpreted sequences are:
 .TP
