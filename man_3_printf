@@ -1,0 +1,38 @@
+.TH man 3 "17 March 2020" "1.0" "_printf"
+.SH NAME
+.B 0x11. C - printf
+- .
+.SH SYNOPSIS
+#include "holberton.h"
+.TP
+.B _printf FORMAT [ARGUMENT]...
+.TP
+.B _printf OPTION
+.SH DESCRIPTION
+.TP
+_printf is a function that shows the content that is sent on the screen according to a format Return value Once. The return is successful, this function returns the number of characters printed (excluding the null byte to end the string).
+.TP
+If an output error is encountered, a negative value is returned.
+.SH OPTIONS
+.B FORMAT controls the output as in C printf. Interpreted sequences are:
+.TP
+.B  %d prints a decimal base 10.
+.TP
+.B i% prints an integer base 10.
+.TP
+.B %c prints a character.
+.TP
+.B %s prints a string of characters.
+.TP
+.B %% print a percent sign.
+.SH EXAMPLE
+
+#include "holberton.h"
+
+_printf("%d %i %c %s");
+.SH SEE ALSO
+.I man or help printf (3)
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Duvan Jaramillo Juan Acevedo.
