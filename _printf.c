@@ -10,7 +10,10 @@ int _printf(const char *format, ...)
 		{"c", _print_char},
 		{"s", print_string},
 		{"%", print_percent},
-		{NULL, NULL}};
+		{"d", print_decimal},
+		{"i", print_integer},
+		{NULL, NULL}
+	};
 	int print = 0;
 
 	va_list ap;
