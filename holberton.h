@@ -1,26 +1,30 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
-#include <unistd.h>
+
+
 #include <stdlib.h>
 #include <stdarg.h>
 #include <limits.h>
+#include <unistd.h>
 /**
- * struct op- defines a structure
- * @op: the operator
- * @f: the fuction associated
+ * struct operators - it's the structure of the operators
+ * @operators: Pointer to the structure of the operators
+ * @func: Pointer to the function that is going to be used
  */
-typedef struct op
+struct operators
 {
-	char *op;
-	int (*f)(va_list);
-} op_t;
+	char *operators;
+	int (*func)(va_list);
+};
+typedef struct operators operators_;
 int _printf(const char *format, ...);
-int print_char(char);
-int _print_char(va_list);
-int print_string(va_list);
-int print_percent(va_list);
-int _parseo(const char *format, op_t ops[], va_list ap);
-int print_decimal(va_list ap);
-int print_n(int n);
-int print_integer(va_list ap);
+int _analyser(const char *format, operators_ op2[], va_list arguments);
+int write_chars(char);
+int _print_chars(va_list);
+int _print_strings(va_list);
+int _print_modulo(va_list);
+int _print_decimal(va_list arguments);
+int _print_integers(va_list arguments);
+int _print_numb(int numb);
+
 #endif
