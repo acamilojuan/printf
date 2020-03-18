@@ -29,9 +29,15 @@ If an output error is found, a negative value is returned.
 
 #include "holberton.h"
 
-_printf("%d %i %c %s");
+_printf("33%d, 41%i, d%c, holberton%s"); the output will be: 33, 41, d, holberton
+.TP
+.B _printf ("Holberton School%s"); the output will be: Holberton School
+.TP
+.B _printf("Juan Acevedo & Duvan Jaramillo"); the output will be: Juan Acevedo & Duvan Jaramillo 
 .SH SEE ALSO
 .I man or help printf (3)
+.TP
+.B man printf
 .SH BUGS
 No known bugs.
 .SH AUTHOR
