@@ -1,32 +1,31 @@
 #include "holberton.h"
 /**
- *_printf - print char
+ *_printf - Main function
  *@format: const char *
- *Return: int print
+ *Return: integer to print
  */
 int _printf(const char *format, ...)
 {
-	op_t ops[] = {
-		{"c", _print_char},
-		{"s", print_string},
-		{"%", print_percent},
-		{"d", print_decimal},
-		{"i", print_integer},
+	operators_ op2[] = {
+		{"c", _print_chars},
+		{"s", _print_strings},
+		{"%", _print_modulo},
+		{"d", _print_decimal},
+		{"i", _print_integers},
 		{NULL, NULL}
 	};
-	int print = 0;
-
-	va_list ap;
+	int prints = 0;
+	va_list arguments;
 
 	if (format != NULL)
 	{
-		va_start(ap, format);
-		print = _parseo(format, ops, ap);
-		va_end(ap);
+		va_start(arguments, format);
+		prints = _analyser(format, op2, arguments);
+		va_end(arguments);
 	}
 	else
 	{
 		return (-1);
 	}
-	return (print);
+	return (prints);
 }

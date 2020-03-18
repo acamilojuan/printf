@@ -1,97 +1,91 @@
 #include "holberton.h"
 /**
- * print_string - Print string
- * @ap: arguments
- * Return: return the amount of characters
+ * _print_strings - Function to print strings
+ * @arguments: List of arguments to be used
+ * Return: Number of characters
  */
 
-int print_string(va_list ap)
+int _print_strings(va_list arguments)
 {
-	int x;
-	char *str;
+	int a = 0;
+	char *string;
 
-	str = va_arg(ap, char *);
-	if (str == NULL)
-		str = "(null)";
-	for (x = 0; str[x] != '\0'; x++)
-		print_char(str[x]);
-	return (x);
+	string = va_arg(arguments, char *);
+	if (string == NULL)
+		string = "(null)";
+	while (string[a] != '\0')
+	{
+		write_chars(string[a]);
+		a++;
+	}
+	return (a);
 }
 
 /**
- * print_percent - Print percent symbol
- * @ap: argumnt
- * Return: percent characters
+ * _print_modulo - Function to print modulo symbol
+ * @arguments: List of arguments to be used
+ * Return: Modulo symbols
  */
 
-int print_percent(__attribute__((unused))va_list ap)
+int _print_modulo(__attribute__((unused))va_list arguments)
 {
-	print_char('%');
+	write_chars('%');
 	return (1);
 }
 /**
- * print_decimal - Print percent symbol
- * @ap: argumnt
- * Return: decimal characters
+ * _print_decimal - Function to print decimals
+ * @arguments: List of arguments to be used
+ * Return: Sum of Decimals
  */
-int print_decimal(va_list ap)
+int _print_decimal(va_list arguments)
 {
-	int p = 0;
-	int contador = 0;
+	int a = 0, sum = 0;
 
-	p = va_arg(ap, int);
-	contador += print_n(p);
-
-	return (contador);
+	a = va_arg(arguments, int);
+	sum += _print_numb(a);
+	return (sum);
 
 }
 /**
- * print_integer - Print integer
- * @ap: argumnt
- * Return: int characters
+ * _print_integers - Function to print integers
+ * @arguments: List of arguments to be used
+ * Return: Sum of integer chars
  */
-int print_integer(va_list ap)
+int _print_integers(va_list arguments)
 {
-	int p = 0;
+	int sum = 0;
 
-	p += print_n(va_arg(ap, int));
-
-	return (p);
+	sum += _print_numb(va_arg(arguments, int));
+	return (sum);
 }
 /**
- * print_n - prints an integer char by char
- * @n: The integer to print
- *
- * Return: void
+ * _print_numb - Function to print integers one by one
+ * @numb: Variable int to be printed
+ * Return: Integer variable
  */
-int print_n(int n)
+int _print_numb(int numb)
 {
-	int aux, i, len, m;
+	int a = 0, b = 0, leng = 0, m = 0;
 
-	aux = 0;
-	i = 0;
-	len = 0;
-	m = 0;
-
-	if (n == INT_MIN)
+	if (numb == INT_MIN)
 	{
-		n = n + 1;
-		aux = 1;
+		numb = numb + 1;
+		b = 1;
 	}
-
-	if (n < 0)
+	if (numb < 0)
 	{
-		n = -n;
-		print_char('-');
-		i++;
+		numb = -numb;
+		write_chars('-');
+		a++;
 	}
-
-	if (n / 10 != 0)
-		len = (m + print_n(n / 10));
-	if (aux == 1)
-		print_char('8');
+	if (numb / 10 != 0)
+		leng = (m + _print_numb(numb / 10));
+	if (b == 1)
+		write_chars('8');
 	else
-		print_char(n % 10 + '0');
-	i++;
-	return (i + len);
+	{
+		write_chars(numb % 10 + '0');
+	}
+	a++;
+	return (a + leng);
 }
