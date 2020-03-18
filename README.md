@@ -27,7 +27,7 @@ Once you have downloaded the repository, go to the folder where all the function
 + The function must be created without using global variables, functions and macros differents to *_write, malloc, free and the variadic ones_* <br>
 
 <h2>FLOW CHART</h2>
-![flowchart](Flow Chart.jpg)
+![flowchart](https://raw.githubusercontent.com/acamilojuan/printf/master/Flow%20Chart.jpg)
 
 <h3>AUTHORS</h3>
 - Duvan Jaramillo<br>
