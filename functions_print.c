@@ -20,6 +20,7 @@ int _print_strings(va_list arguments)
 	}
 	return (a);
 }
+
 /**
  * _print_modulo - Function to print modulo symbol
  * @arguments: List of arguments to be used
