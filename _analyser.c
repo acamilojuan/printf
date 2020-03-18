@@ -16,7 +16,7 @@ int _analyser(const char *format, operators_ op2[], va_list arguments)
 	{
 		if (format[a] == '%')
 		{
-			while (op2[b].operators != NULL)
+			for (b = 0; op2[b].operators != NULL; b++)
 			{
 				if (format[a + 1] == op2[b].operators[0])
 				{
@@ -26,7 +26,6 @@ int _analyser(const char *format, operators_ op2[], va_list arguments)
 						print += c;
 						break;
 				}
-				b++;
 			}
 			if (op2[b].operators == NULL && format[a + 1] != ' ')
 			{
