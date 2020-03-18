@@ -35,4 +35,4 @@ _printf("%d %i %c %s");
 .SH BUGS
 No known bugs.
 .SH AUTHOR
-Duvan Jaramillo Juan Acevedo.
+Duvan Jaramillo & Juan Acevedo.
