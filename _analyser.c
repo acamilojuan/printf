@@ -12,7 +12,7 @@ int _analyser(const char *format, operators_ op2[], va_list arguments)
 	int a = 0, b = 0, print = 0;
 	int c;
 
-	while (format[a] != '\0')
+	for (a = 0; format[a] != '\0'; a++)
 	{
 		if (format[a] == '%')
 		{
@@ -46,7 +46,6 @@ int _analyser(const char *format, operators_ op2[], va_list arguments)
 			write_chars(format[a]);
 			print++;
 		}
-		a++;
 	}
 	return (print);
 }
