@@ -17,7 +17,9 @@ Once you have downloaded the repository, go to the folder where all the function
 <h2>HOW TO USE AND EXAMPLES</h2>
 #include "holberton.h"
 
-_printf("%d %i %c %s");
++ _printf("33%d, 41%i, d%c, holberton%s"); the output will be: 33, 41, d, holberton
++ _printf ("Holberton School%s"); the output will be: Holberton School
++ _printf("Juan Acevedo & Duvan Jaramillo"); the output will be: Juan Acevedo & Duvan Jaramillo
 
 <h2>REQUIREMENTS</h2>
 + The function have to print the information requested in the standard output.<br>
