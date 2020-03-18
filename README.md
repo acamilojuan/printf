@@ -10,6 +10,9 @@ In order to apply different knowledges we have learned, in this project we've be
 + It must print with different types of datas and formats.<br>
 + The function must be created without using global variables, functions and macros differents to *_write, malloc, free and the variadic ones_* <br>
 
+<h2>FLOW CHART</h2>
+![flow_chart](Flow Chart Printf.png)
+
 <h3>AUTHORS</h3>
 - Duvan Jaramillo<br>
 - Juan Acevedo
